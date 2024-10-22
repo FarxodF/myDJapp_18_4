@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Регистрация</title>
+</head>
+<body>
+    <h1>Зарегистрируйтесь</h1>
+    <form action="/" method="post">
+        {% csrf_token %}
+        <label for="username">Имя пользователя:</label><br>
+        <input type="text" id="username" name="username" maxlength="30"/><br>
+        <label for="password">Пароль:</label><br>
+        <input type="password" id="password" name="password" minlength="8"/><br>
+        <label for="repeat_password">Повторите пароль:</label><br>
+        <input type="password" id="repeat_password" name="repeat_password" minlength="8"/><br>
+        <label for="age">Возраст:</label><br>
+        <input type="number" id="age" name="age" maxlength="3"/><br>
+        <button type="submit">Зарегистрироваться</button>
+    </form>
+</body>
+</html>
